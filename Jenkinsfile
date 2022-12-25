@@ -23,7 +23,7 @@ pipeline {
         stage('Terraform Plan') {
             steps {
                 echo 'Terraform Initialization is In Progress!'
-                sh terraform plan -var-file= dev.tfvars.json -out="out.plan"
+                sh terraform plan -var-file="dev.tfvars.json" -out="out.plan"
 
             }
         }

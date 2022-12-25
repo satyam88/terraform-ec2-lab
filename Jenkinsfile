@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh pwd
                 echo 'Terraform Initialization is In Progress!'
-                sh "terraform plan -out=tfplan -input=false -var-file='dev.tfvars'"
+                sh "/usr/bin/terraform plan -out=tfplan -input=false -var-file='dev.tfvars'"
             }
         }
         stage('Approval') {

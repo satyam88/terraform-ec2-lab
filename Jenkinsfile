@@ -8,13 +8,18 @@ pipeline {
 
 
     stages {
-        stage('Terraform Initialization') {
+        stage('Terraform Version') {
             steps {
                 echo 'Terraform Initialization is In Progress!'
                 sh 'terraform --version'
             }
         }
-
+        stage('Terraform Init') {
+            steps {
+                echo 'Terraform Initialization is In Progress!'
+                sh 'terraform init '
+            }
+        }
         stage('Terraform Plan') {
             steps {
                 echo 'Terraform Initialization is In Progress!'

@@ -22,7 +22,7 @@ pipeline {
         }
         stage('Terraform Plan') {
             steps {
-                sh pwd
+                sh 'pwd'
                 echo 'Terraform Initialization is In Progress!'
                 sh "/usr/bin/terraform plan -out=tfplan -input=false -var-file='dev.tfvars'"
             }
